@@ -9,7 +9,7 @@ if grep -q "source ~/.bashrc_addons" ~/.bashrc
 then
   echo "Not adding source as it already exists"   
 else
-  echo "source ~/.bashrc_addons" > ~/.bashrc
+  echo "source ~/.bashrc_addons" >> ~/.bashrc
 fi
 
 # Symlink stuff
