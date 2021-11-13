@@ -2,8 +2,12 @@
 
 # More customization on Starship
 
+# Publish Dockerfile to Dockerhub
+
 # SSH keys
 
 # GPG key
+
+# Precommit hooks?
 
 # editorconfig?
