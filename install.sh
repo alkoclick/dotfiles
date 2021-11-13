@@ -17,7 +17,7 @@ echo "Symlinking dotfiles..."
 ln -sf "$PWD/.bashrc_addons" ~/.bashrc_addons
 ln -sf "$PWD/.bash_aliases" ~/.bash_aliases
 ln -sf "$PWD/.gitconfig" ~/.gitconfig
-ln -sf "$PWD/.gitconfig_custom" ~/.gitconfig_custom
+cp .gitconfig_custom ~/.gitconfig_custom
 
 # Source to see the results
 
