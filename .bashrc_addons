@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Let's be a simple human
-export EDITOR=NANO
+export EDITOR=micro
 
 # Fancy terminal stuff
 eval "$(starship init bash)"
