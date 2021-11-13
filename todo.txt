@@ -1,7 +1,5 @@
 # Terminal shortcuts
 
-# More customization on Starship
-
 # Publish Dockerfile to Dockerhub
 
 # SSH keys

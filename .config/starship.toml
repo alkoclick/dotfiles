@@ -1,0 +1,8 @@
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+
+[git_metrics]
+added_style = "bold blue"
+format = 'with [+$added]($added_style)/[-$deleted]($deleted_style) '
+disabled = false

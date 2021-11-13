@@ -13,6 +13,7 @@ ln -sf "$PWD/.bashrc_addons" ~/.bashrc_addons
 ln -sf "$PWD/.bash_aliases" ~/.bash_aliases
 ln -sf "$PWD/.gitconfig" ~/.gitconfig
 cp .gitconfig_custom ~/.gitconfig_custom
+ln -sf "$PWD/.config/starship.toml" ~/.config/starship.toml
 
 # Source to see the results
 
