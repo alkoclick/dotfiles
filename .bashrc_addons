@@ -3,10 +3,7 @@
 # Let's be a simple human
 export EDITOR=NANO
 
-# Homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 # Fancy terminal stuff
 eval "$(starship init bash)"
 
-. .bash_aliases
+. ~/.bash_aliases

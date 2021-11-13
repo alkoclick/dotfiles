@@ -1,0 +1,9 @@
+# Terminal shortcuts
+
+# More customization on Starship
+
+# SSH keys
+
+# GPG key
+
+# editorconfig?
