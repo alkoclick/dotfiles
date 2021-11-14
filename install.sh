@@ -13,6 +13,8 @@ ln -sf "$PWD/.bashrc_addons" ~/.bashrc_addons
 ln -sf "$PWD/.bash_aliases" ~/.bash_aliases
 ln -sf "$PWD/.gitconfig" ~/.gitconfig
 cp .gitconfig_custom ~/.gitconfig_custom
+
+mkdir -p ~/.config/micro
 ln -sf "$PWD/.config/starship.toml" ~/.config/starship.toml
 ln -sf "$PWD/.config/micro/bindings.json" ~/.config/micro/bindings.json
 ln -sf "$PWD/.config/micro/settings.json" ~/.config/micro/settings.json
