@@ -1,4 +1,5 @@
 # Terminal shortcuts
+## Add exa and replace ls
 
 # Publish Dockerfile to Dockerhub
 
