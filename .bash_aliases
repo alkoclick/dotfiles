@@ -10,9 +10,10 @@ alias remove_old_snaps='snap list --all | while read snapname ver rev trk pub no
 
 # DevOpsLand
 alias drun="docker run --rm -it"
+alias dockerhere="docker run --rm -it --entrypoint bash -v $PWD:/app --workdir /app"
 alias tin="terraform init"
 # Can be combined with -target etc
-alias tpl="terraform plan -out /tmp/terraform"
-alias tap="terraform apply /tmp/terraform"
+alias tpl="terraform plan -out terraform.tfplan"
+alias tap="terraform apply 'terraform.tfplan'"
 
 alias test_alias='echo "Aliases loaded successfully!"'

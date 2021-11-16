@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-sudo apt-get install ubuntu-budgie-desktop\
-  &&\
-  sudo apt-get remove -y firefox libreoffice*\
+sudo apt-get --no-install-recommends install ubuntu-budgie-desktop\
   &&\
   sudo apt-get autoremove -y
 
