@@ -1,5 +1,3 @@
-# Publish Dockerfile to Dockerhub
-
 # SSH keys
 
 # GPG key
