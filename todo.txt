@@ -1,5 +1,6 @@
 # Terminal shortcuts
 ## Add exa and replace ls
+## Check stuff from /me repo
 
 # Publish Dockerfile to Dockerhub
 
