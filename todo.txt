@@ -1,6 +1,3 @@
-# Terminal shortcuts
-## Check stuff from /me repo
-
 # Publish Dockerfile to Dockerhub
 
 # SSH keys
