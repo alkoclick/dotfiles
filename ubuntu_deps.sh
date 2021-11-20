@@ -41,3 +41,5 @@ if ! command -v micro &> /dev/null
 then
 	sudo eget -q --to=/usr/local/bin/ "https://github.com/zyedidia/micro/releases/download/v2.0.10/micro-2.0.10-linux64.tar.gz"
 fi
+
+echo "Installation done! If this is a long-term system, consider running the bells_and_whistles.sh script as well."
