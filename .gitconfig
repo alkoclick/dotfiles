@@ -3,3 +3,13 @@
 
 [alias]
   wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+
+[commit]
+	gpgsign = true
+
+### GPG stuff, required ###
+
+# gpg --full-generate-key
+# gpg --list-secret-keys --keyid-format LONG alkoclick@gmail.com
+# git config --global user.signingkey REPLACE_ME
+# gpg --armor --export REPLACE_ME | cs

@@ -10,7 +10,7 @@ alias qmit='git add . && git commit -m "Committed via qmit alias" && git push'
 ## # General sysadmin stuff ###
 
 # This one requires root or a role that can add/remove snaps
-alias remove_old_snaps='snap list --all | while read snapname ver rev trk pub notes; do if [[ $notes = *disabled* ]]; then snap remove "$snapname" --revision="$rev"; fi; done'
+alias remove_old_snaps='sudo snap list --all | while read snapname ver rev trk pub notes; do if [[ $notes = *disabled* ]]; then sudo snap remove "$snapname" --revision="$rev"; fi; done'
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -32,8 +32,11 @@ alias l='ls -CFh'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+# Faster faster faster
 alias m=micro
 
+# Copy to cliboard for all outputs
+alias "cs=xclip -selection clipboard"
 
 
 ## # DevOpsLand ###

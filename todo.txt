@@ -1,7 +1,7 @@
-# SSH keys
-
-# GPG key
-
 # Precommit hooks?
 
-# editorconfig?
+# Keyboard shortcuts for/in terminal
+
+# Get rid of snap
+
+# Return to homebrew
