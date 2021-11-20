@@ -8,7 +8,7 @@ gsettings set org.gnome.shell.app-switcher current-workspace-only true
 # Alt-tab across windows
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications []
-
+sudo apt install -y --no-install-recommends gnome-tweaks
 
 # Automated upgrades
 sudo apt install -y unattended-upgrades apt-listchanges bsd-mailx
