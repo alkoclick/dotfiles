@@ -1,7 +1,7 @@
 # Precommit hooks?
 
+# Use terraform/ansible for provisioning keys?
+
 # Keyboard shortcuts for/in terminal
 
-# Get rid of snap
-
-# Return to homebrew
+# Return to homebrew?
