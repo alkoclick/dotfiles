@@ -1,11 +1,9 @@
-# Use terraform/ansible for provisioning keys?
-
 # Keyboard shortcuts for/in terminal
 
 # Install 1password
 
 # Fancy up starship prompt
 
-# Tmuxp setupshttps://registry.terraform.io/providers/hashicorp/archive/latest 
+# Tmuxp setupshttps://registry.terraform.io/providers/hashicorp/archive/latest
 
 # Directory bookmarks
