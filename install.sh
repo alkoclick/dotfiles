@@ -4,6 +4,7 @@
 echo "Symlinking dotfiles..."
 rm ~/.bashrc > /dev/null
 ln -sf "$PWD/.bashrc" ~/.bashrc
+ln -sf "$PWD/.fzf.bash" ~/.fzf.bash
 ln -sf "$PWD/.bash_aliases" ~/.bash_aliases
 ln -sf "$PWD/.gitconfig" ~/.gitconfig
 cp .gitconfig_custom ~/.gitconfig_custom

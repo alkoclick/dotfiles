@@ -51,6 +51,8 @@ fi
 # Let's be a simple human
 export EDITOR=micro
 
+# Brew first because other stuff may depend on brew-installed utils
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # Fancy terminal stuff
 eval "$(starship init bash)"
 # Fzf keybindings for Bash
@@ -60,3 +62,5 @@ source /usr/share/doc/fzf/examples/completion.bash
 
 # Load aliases from separate file
 . ~/.bash_aliases
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

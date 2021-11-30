@@ -1,7 +1,11 @@
-# Precommit hooks?
-
 # Use terraform/ansible for provisioning keys?
 
 # Keyboard shortcuts for/in terminal
 
-# Return to homebrew?
+# Install 1password
+
+# Fancy up starship prompt
+
+# Tmuxp setupshttps://registry.terraform.io/providers/hashicorp/archive/latest 
+
+# Directory bookmarks
