@@ -1,9 +1,11 @@
 # Keyboard shortcuts for/in terminal
 
-# Install 1password
-
 # Fancy up starship prompt
 
-# Tmuxp setupshttps://registry.terraform.io/providers/hashicorp/archive/latest
+# Tmuxp setups
 
 # Directory bookmarks
+
+# direnv?
+
+# Create an external provider for gitlab?

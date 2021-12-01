@@ -1,6 +1,3 @@
-
-
-
 ### Git ###
 # For single commands consider using .gitconfig instead
 alias qmit='git add . && git commit -m "Committed via qmit alias" && git push'
@@ -36,7 +33,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias m=micro
 
 # Copy to cliboard for all outputs
-alias "cs=xclip -selection clipboard"
+alias cs="xclip -selection clipboard"
+
+alias oplog='export OP_SESSION_my=$(op signin my --raw)'
 
 
 ## # DevOpsLand ###
