@@ -1,8 +1,62 @@
+### Battery ###
+[battery]
+format = "[$symbol$percentage]($style) "
+charging_symbol = "⚡"
+discharging_symbol = ""
+
+[[battery.display]]
+threshold = 20
+style = "yellow"
+
+[[battery.display]]
+threshold = 10
+style = "red"
+
+
+### General shell ###
 [character]
-success_symbol = "[➜](bold green)"
-error_symbol = "[✗](bold red)"
+success_symbol = "[∴](bold green)"
+error_symbol = "[∵](bold red)"
+
+[directory]
+style = "cyan"
+
+[cmd_duration]
+format = "took [\\[$duration\\]]($style) "
+style = "bold"
+show_notifications = true
+
+[shlvl]
+disabled = false
+threshold = 1
+symbol = "⎇  "
+
+
+### Git ###
+[git_branch]
+style = "bold cyan"
+
+[git_commit]
+tag_disabled = false
 
 [git_metrics]
-added_style = "bold blue"
+added_style = "bold green"
+deleted_style = "bold red"
 format = 'with [+$added]($added_style)/[-$deleted]($deleted_style) '
 disabled = false
+
+
+### DevOops ###
+[kubernetes]
+format = '[$context \($namespace\)](dimmed green) ⛵ \\n'
+disabled = false
+
+[memory_usage]
+format = "-- [${ram}]($style) "
+symbol = ""
+disabled = false
+threshold = 80
+
+[terraform]
+format = "on [$symbol$workspace]($style) "
+symbol = "👾 "

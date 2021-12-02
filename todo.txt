@@ -1,11 +1,13 @@
 # Keyboard shortcuts for/in terminal
 
-# Fancy up starship prompt
-
 # Tmuxp setups
 
 # Directory bookmarks
 
 # direnv?
+
+# Break stuff down into folders
+
+# Terraform instead of symlinks?
 
 # Create an external provider for gitlab?
