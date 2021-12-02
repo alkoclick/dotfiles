@@ -2,8 +2,6 @@
 
 # Tmuxp setups
 
-# Directory bookmarks
-
 # direnv?
 
 # Break stuff down into folders
