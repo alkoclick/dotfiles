@@ -55,10 +55,6 @@ export EDITOR=micro
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # Fancy terminal stuff
 eval "$(starship init bash)"
-# Fzf keybindings for Bash
-source /usr/share/doc/fzf/examples/key-bindings.bash
-# Fuzzy auto-completion for Bash
-source /usr/share/doc/fzf/examples/completion.bash
 
 # Load aliases from separate file
 . ~/.bash_aliases
