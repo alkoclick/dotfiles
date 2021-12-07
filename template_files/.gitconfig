@@ -6,8 +6,7 @@
 
 [user]
   name = Alexandros Papageorgiou Koufidis
-  # TODO Template this
-  email = alkoclick@gmail.com
+  email = ${EMAIL}
 
 
 ### GPG stuff, required ###
