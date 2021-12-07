@@ -12,6 +12,6 @@ locals {
 
 resource "local_file" "copy_file" {
   for_each = toset(local.files)
-  content  = file("${path.module}/${each.value}")
+  content  = file("${path.module}/copy_files/${each.value}")
   filename = pathexpand("~/${each.value}")
 }
