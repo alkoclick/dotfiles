@@ -14,6 +14,7 @@ resource "shell_script" "brew_package" {
   lifecycle_commands {
     create = format("brew install -q $PACKAGE; echo %s", local.cmd_print_version)
     read   = format("echo %s", local.cmd_print_version)
+    update = format("brew install -q $PACKAGE; echo %s", local.cmd_print_version)
     delete = "brew uninstall -q $PACKAGE"
   }
 
