@@ -9,6 +9,9 @@ set -e
 # This is ours, to install Homebrew
 echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" > /dev/null
 
+# For this session, link brew (after Terraforming it'll be in .bashrc)
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 # We need Terraform to run everything else
 brew install -q terraform
 

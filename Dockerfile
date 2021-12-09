@@ -1,5 +1,5 @@
-# 22.04 digest
-FROM ubuntu@sha256:89d243610a4bb0b4b00bb7179fc6135bed3f70236b31b72eb477d9770c08acf5
+# 22.04 digest, https://registry.hub.docker.com/_/ubuntu?tab=tags&page=1&name=22.04
+FROM ubuntu@sha256:3c3de9608507804525ff4303874525760ea36d62606e8105f515adaa761b80cb
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -9,21 +9,20 @@ RUN apt-get update -qq \
   apt-get install -qq --no-install-recommends \
     ca-certificates \
     curl \
+    gcc \
     git \
     sudo \
+    unzip \
     > /dev/null \
   &&\
   rm -rf /var/lib/apt/lists/*
 
-COPY . dotfiles
+RUN useradd -ms /bin/bash alexander &&\
+    echo 'alexander ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
 
-# This includes all our own deps
-# RUN apt-get update -qq \
-  # &&\
-  # cd dotfiles \
-  # &&\
-  # ./first_time.sh \
-  # &&\
-  # ./install.sh \
-    # &&\
-  # rm -rf /var/lib/apt/lists/*
+COPY . /home/alexander/dotfiles
+WORKDIR /home/alexander/dotfiles
+RUN chown -R alexander: /home/alexander/
+USER alexander
+
+RUN ./first_time.sh
