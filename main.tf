@@ -35,3 +35,7 @@ module "keys" {
   email = var.email
   name  = var.name
 }
+
+module "brew" {
+  source = "./brew"
+}
