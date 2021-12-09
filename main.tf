@@ -28,14 +28,3 @@ resource "local_file" "template_file" {
   content  = templatefile("${path.module}/template_files/${each.value}", local.template_vars)
   filename = pathexpand("~/${each.value}")
 }
-
-module "keys" {
-  source = "./keys"
-
-  email = var.email
-  name  = var.name
-}
-
-module "brew" {
-  source = "./brew"
-}

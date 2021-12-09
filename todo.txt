@@ -1,7 +1,8 @@
 # Blocking:
 - Provision GPG key by TF
-- APT provider
+- Replace installation script with fully TF'ed process
 
 # NonBlocking
+- Replace bells and whistles script with dedicated TF installer
 - Tmuxp setups
 - Create an external provider for gitlab SSH key upload?
