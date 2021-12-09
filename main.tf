@@ -1,25 +1,37 @@
-resource "tls_private_key" "this" {
-  algorithm   = "ECDSA"
-  ecdsa_curve = "P384"
+locals {
+  copy_files = [
+    ".bashrc",
+    ".bash_aliases",
+    ".fzf.bash",
+    ".config/micro/bindings.json",
+    ".config/micro/settings.json",
+    ".config/starship.toml",
+  ]
+  template_files = [
+    ".gitconfig",
+  ]
+  template_vars = {
+    EMAIL   = var.email
+    GPG_KEY = var.gpg_key
+    NAME    = var.name
+  }
 }
 
-resource "local_file" "private_key" {
-  content         = tls_private_key.this.private_key_pem
-  filename        = pathexpand("~/.ssh/id_ecdsa")
-  file_permission = "600"
+resource "local_file" "copy_file" {
+  for_each = toset(local.copy_files)
+  content  = file("${path.module}/copy_files/${each.value}")
+  filename = pathexpand("~/${each.value}")
 }
 
-resource "local_file" "public_key" {
-  content         = tls_private_key.this.public_key_openssh
-  filename        = pathexpand("~/.ssh/id_ecdsa.pub")
-  file_permission = "644"
+resource "local_file" "template_file" {
+  for_each = toset(local.template_files)
+  content  = templatefile("${path.module}/template_files/${each.value}", local.template_vars)
+  filename = pathexpand("~/${each.value}")
 }
 
-resource "github_user_ssh_key" "public_key" {
-  key   = tls_private_key.this.public_key_openssh
-  title = format("%s@%s", data.external.info.result.user, data.external.info.result.host)
-}
+module "keys" {
+  source = "./keys"
 
-output "public_key" {
-  value = tls_private_key.this.public_key_openssh
+  email = var.email
+  name  = var.name
 }

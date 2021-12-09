@@ -10,11 +10,7 @@ data "onepassword_item_password" "github_token" {
   name  = "Github.com API Token"
 }
 
-data "onepassword_item_password" "gitlab_token" {
-  vault = data.onepassword_vault.this.id
-  name  = "Gitlab.com API Token"
-}
-
-data "external" "info" {
-  program = ["bash", "${path.module}/tf_info.sh"]
-}
+#data "onepassword_item_password" "gitlab_token" {
+#  vault = data.onepassword_vault.this.id
+#  name  = "Gitlab.com API Token"
+#}

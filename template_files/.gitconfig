@@ -5,9 +5,9 @@
 	gpgsign = true
 
 [user]
-  name = Alexandros Papageorgiou Koufidis
+  name = ${NAME}
   email = ${EMAIL}
-
+  signingkey = ${GPG_KEY}
 
 ### GPG stuff, required ###
 

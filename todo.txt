@@ -1,9 +1,7 @@
-# Tmuxp setups
+# Blocking:
+- Provision GPG key by TF
+- APT provider
 
-# direnv?
-
-# Break stuff down into folders
-
-# Use templates and variables in TF
-
-# Create an external provider for gitlab?
+# NonBlocking
+- Tmuxp setups
+- Create an external provider for gitlab SSH key upload?

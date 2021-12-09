@@ -7,3 +7,15 @@ variable "email" {
     error_message = "Email is empty, please populate a file named config.auto.tfvars with `email=...`."
   }
 }
+
+
+variable "gpg_key" {
+  description = "The GPG key fingerprint to be used for Git commits."
+  type        = string
+}
+
+variable "name" {
+  default     = "Alexandros Papageorgiou Koufidis"
+  description = "The name that should be used as the author and owner of keys."
+  type        = string
+}
