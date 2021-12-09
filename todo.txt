@@ -5,4 +5,5 @@
 # NonBlocking
 - Replace bells and whistles script with dedicated TF installer
 - Tmuxp setups
+- Move onepassword installation to terraform
 - Create an external provider for gitlab SSH key upload?

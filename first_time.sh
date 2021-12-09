@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Run this script when setting up a new system for the first time
+
 # Exit if any of the intermediate steps fail
 set -e
 
@@ -7,16 +9,8 @@ set -e
 # This is ours, to install Homebrew
 echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" > /dev/null
 
-
-# Terminal and looks
-sudo apt-get install fonts-firacode xclip > /dev/null
-brew install -q starship fzf
-
-
-# Tooling
-
-## Lazygit because default git cli is pain and Micro because nano is not enough
-brew install -q jesseduffield/lazygit/lazygit micro
+# We need Terraform to run everything else
+brew install -q terraform
 
 ## OnePassword is not on any package managers :/
 if ! command -v op &> /dev/null
@@ -27,4 +21,4 @@ then
   rm op.*
 fi
 
-echo "Installation done! If this is a long-term system, consider running the bells_and_whistles.sh script as well."
+echo "Installation done! "

@@ -22,7 +22,7 @@ COPY . dotfiles
   # &&\
   # cd dotfiles \
   # &&\
-  # ./ubuntu_deps.sh \
+  # ./first_time.sh \
   # &&\
   # ./install.sh \
     # &&\
