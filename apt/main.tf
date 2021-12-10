@@ -15,6 +15,7 @@ resource "shell_script" "apt_package" {
   for_each = toset(local.apt_packages)
 
   lifecycle_commands {
+    # Sudo here will actually work normally during execution, if you have a pass you will be asked for it from STDIN
     create = format("sudo apt-get install -y --no-install-recommends $PACKAGE; echo %s", local.cmd_print_version)
     read   = format("echo %s", local.cmd_print_version)
     update = format("sudo apt-get install -y --no-install-recommends --reinstall $PACKAGE; echo %s", local.cmd_print_version)
