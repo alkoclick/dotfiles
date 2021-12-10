@@ -11,6 +11,7 @@ RUN apt-get update -qq \
     curl \
     gcc \
     git \
+    gpg \
     sudo \
     unzip \
     > /dev/null \

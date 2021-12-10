@@ -28,7 +28,6 @@ fi
 export OP_SESSION_my=1
 # TODO Also would be good to clean these up
 export TF_VAR_email="alkoclick@gmail.com"
-export TF_VAR_gpg_key=1
 
 terraform init
 terraform apply -auto-approve

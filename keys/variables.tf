@@ -12,3 +12,8 @@ variable "op_connect" {
   description = "Whether to connect to the OnePassword remote. Requires interactive session to input password."
   type        = bool
 }
+
+variable "op_vault" {
+  description = "The OnePassword vault that should be used to fetch secrets from."
+  type        = string
+}

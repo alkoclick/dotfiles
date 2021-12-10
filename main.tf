@@ -11,9 +11,10 @@ locals {
     ".gitconfig",
   ]
   template_vars = {
-    EMAIL   = var.email
-    GPG_KEY = var.gpg_key
-    NAME    = var.name
+    EMAIL    = var.email
+    GPG_KEY  = module.keys.gpg_pub_key_id
+    GPG_SIGN = var.op_connect
+    NAME     = var.name
   }
 }
 

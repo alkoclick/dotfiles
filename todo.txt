@@ -1,8 +1,9 @@
 # Blocking:
-- Provision GPG key by TF
+-
 
 # NonBlocking
 - Replace bells and whistles script with dedicated TF installer
+- Autocomplete for TF
 - Tmuxp setups
 - Move onepassword installation to terraform
 - Create an external provider for gitlab SSH key upload?

@@ -2,7 +2,7 @@
   wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
 
 [commit]
-  gpgsign = true
+  gpgsign = ${GPG_SIGN}
 
 [init]
   defaultBranch = main

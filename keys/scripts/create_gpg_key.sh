@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
 gpg --batch --gen-key <<EOF
   Key-Type: default
   Key-Length: 3072
@@ -13,10 +11,3 @@ gpg --batch --gen-key <<EOF
   Passphrase: $PASSPHRASE
   Expire-Date: 365
 EOF
-
-echo $(cat <<EOF
-  {
-  "pub": "$(gpg --list-signatures --with-colons "$ID" | grep pub | cut -d : -f 5)"
-  }
-EOF
-)
