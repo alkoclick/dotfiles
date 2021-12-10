@@ -2,11 +2,15 @@
 # then the env variable OP_SESSION_<subdomain> is checked for existence.
 
 data "onepassword_vault" "this" {
+  count = var.op_connect ? 1 : 0
+
   name = "Private"
 }
 
 data "onepassword_item_password" "github_token" {
-  vault = data.onepassword_vault.this.id
+  count = var.op_connect ? 1 : 0
+
+  vault = data.onepassword_vault.this[0].id
   name  = "Github.com API Token"
 }
 

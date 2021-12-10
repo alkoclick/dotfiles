@@ -1,6 +1,5 @@
 # Blocking:
 - Provision GPG key by TF
-- Replace installation script with fully TF'ed process
 
 # NonBlocking
 - Replace bells and whistles script with dedicated TF installer

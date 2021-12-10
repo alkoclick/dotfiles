@@ -1,5 +1,4 @@
 variable "email" {
-  default     = ""
   description = "The email throughout the configuration for things such as Git."
   type        = string
   validation {
@@ -10,8 +9,15 @@ variable "email" {
 
 
 variable "gpg_key" {
+  default     = ""
   description = "The GPG key fingerprint to be used for Git commits."
   type        = string
+}
+
+variable "op_connect" {
+  description = "Whether to connect to the OnePassword remote. Requires interactive session to input password."
+  default     = false
+  type        = bool
 }
 
 variable "name" {
