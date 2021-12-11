@@ -1,8 +1,6 @@
-# Blocking:
--
-
 # NonBlocking
 - Replace bells and whistles script with dedicated TF installer
 - Autocomplete for TF
 - Tmuxp setups
+- Reduce the size of image by limiting Homebrew further, removing .terraform directory?
 - Create an external provider for gitlab SSH key upload?
