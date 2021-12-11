@@ -13,16 +13,15 @@ echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/ins
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # We need Terraform to run everything else
+# But first... https://www.youtube.com/watch?v=kdemFfbS5H0
+# Okay yeah, other than that, terraform in homebrew depends on gcc: https://github.com/Homebrew/homebrew-core/blob/master/Formula/terraform.rb#L25
+# This is pretty annoying because the download in 350Mb and the unpacked size 500, and also: https://stackoverflow.com/questions/24966404/brew-install-gcc-too-time-consuming
+# In fact, we actually already have THE EXACT SAME VERSION of gcc in the container
+# Installing without dependencies is next to impossible in Homebrew, in fact the cli arg for it is actually a no-op since 2021
+# To skip installing gcc, we need to trick Homebrew into thinking it's installed
+# Some more context in my Medium article: https://link.medium.com/kO9875K6Slb
+mkdir -p $HOMEBREW_CELLAR/binutils/2.37/bin $HOMEBREW_CELLAR/gcc/11.2.0_3/bin
 brew install -q terraform
-
-## OnePassword is not on any package managers, though this should eventually move to TF :/
-if ! command -v op &> /dev/null
-then
-  curl https://cache.agilebits.com/dist/1P/op/pkg/v1.12.3/op_linux_amd64_v1.12.3.zip --output op.zip
-  unzip op.zip
-  sudo mv op /usr/local/bin/op
-  rm op.*
-fi
 
 # TODO Remove this workaround, added because the provider is somehow initialized :/
 export OP_SESSION_my=1
@@ -31,5 +30,8 @@ export TF_VAR_email="alkoclick@gmail.com"
 
 terraform init
 terraform apply -auto-approve
+
+# Remove the cache which has all the downloaded Homebrew stuff
+rm -rf ~/.cache
 
 echo "Installation done! "
