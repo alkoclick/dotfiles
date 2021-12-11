@@ -1,6 +1,7 @@
 locals {
   brew_packages = [
     "fzf",
+    "kubectl",
     "lazygit",
     "micro",
     "starship",
