@@ -1,5 +1,6 @@
 locals {
   apt_packages = [
+    "cloc",
     "fonts-firacode",
     "xclip",
   ]
