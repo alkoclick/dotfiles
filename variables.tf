@@ -7,9 +7,9 @@ variable "email" {
   }
 }
 
-variable "op_connect" {
-  description = "Whether to connect to the OnePassword remote. Requires interactive session to input password."
+variable "long_term" {
   default     = false
+  description = "Whether this is a long term system, i.e not a container."
   type        = bool
 }
 
@@ -17,4 +17,10 @@ variable "name" {
   default     = "Alexandros Papageorgiou Koufidis"
   description = "The name that should be used as the author and owner of keys."
   type        = string
+}
+
+variable "op_connect" {
+  description = "Whether to connect to the OnePassword remote. Requires interactive session to input password."
+  default     = false
+  type        = bool
 }

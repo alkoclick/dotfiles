@@ -6,6 +6,12 @@ module "brew" {
   source = "./brew"
 }
 
+module "long_term" {
+  count = var.long_term ? 1 : 0
+
+  source = "./long_term"
+}
+
 module "keys" {
   source = "./keys"
 
