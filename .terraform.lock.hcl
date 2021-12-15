@@ -1,27 +1,6 @@
 # This file is maintained automatically by "terraform init".
 # Manual edits may be lost in future updates.
 
-provider "registry.terraform.io/1password/onepassword" {
-  version     = "1.1.2"
-  constraints = "1.1.2"
-  hashes = [
-    "h1:QUw37r5d/NeZFlrxfvCuEvNdHWAvmlytxepEHLgLoaA=",
-    "zh:015313197f06418facf204d1a481e40f6c7a1c7363cecad03d66696ece43bcfa",
-    "zh:06be5c2d3d0697b8eb28eb7e21745d0e4199931023656166097907b6ef9cd7f9",
-    "zh:16d3c79d751f963a2c10ffdec9998c43e7649c005f6c45425e2750518c553c4b",
-    "zh:178693c75a5516aa69adba6d8436929da78d8ea7ec1122b966ff2f13184dc6f5",
-    "zh:2ad0d53c018f715041e1ccf178cbf50d920c860618f3f920b58853eaea0cd41b",
-    "zh:42a71fe222bfc4c07d0c66661f86601584855a5e2c8566923ec9c89d355f6d1a",
-    "zh:5a35290bf4951a0e6a0b92015d2dc18e9f4a0ffc6d4858fdb921c8de6b12dd82",
-    "zh:a6f97b8ee938947f38a2a7bccf728bce7bc6895187e70ecbcbf7c0428b94083b",
-    "zh:ae21f104d66faf1e6de7762f21aaf2b8f217a9e2cfaf985a2f4be5dcccbab4c8",
-    "zh:b374cb769900f5a350623844e2331b8e1397fdebd46b82d2693f7540136e1321",
-    "zh:d46ebab86274413e6967c1170998cb7396521c218ac914fb45038fd4d85bc9d9",
-    "zh:f6d0f8ab3598cc5ebf751af22e64c5073a6ee986d5702cccc1116d22636f7100",
-    "zh:f95cecd857f41462904e22ed9bc79171c79f519cc49994a1f71e4d3a802f2dc1",
-  ]
-}
-
 provider "registry.terraform.io/anasinnyk/onepassword" {
   version     = "1.2.1"
   constraints = "1.2.1"
