@@ -55,6 +55,7 @@ export EDITOR=micro
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # Fancy terminal stuff
 eval "$(starship init bash)"
+eval "$(zoxide init --cmd cd bash)"
 
 # Load aliases from separate file
 . ~/.bash_aliases
