@@ -1,5 +1,7 @@
 # NonBlocking
 - Replace bells and whistles script with dedicated TF installer
+- Auto install one password CLI
+- Install jetbrains toolbox?
 - Autocomplete for TF
 - https://twitter.com/amilajack/status/1479328649820000256?t=t0MYQ96wG8Jfrv8knxl5cw
 - Reduce the size of image by limiting Homebrew further, removing .terraform directory?

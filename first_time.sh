@@ -5,6 +5,9 @@
 # Exit if any of the intermediate steps fail
 set -e
 
+# In case it's not here
+sudo apt-get install -y curl
+
 # As a developer, you get one curlbash for free before the guilt kicks in
 # This is ours, to install Homebrew
 echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" > /dev/null
@@ -34,4 +37,4 @@ terraform apply -auto-approve
 # Remove the cache which has all the downloaded Homebrew stuff
 rm -rf ~/.cache
 
-echo "Installation done! "
+echo 'Installation done, please run eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)'

@@ -9,6 +9,8 @@ gsettings set org.gnome.shell.app-switcher current-workspace-only true
 # Alt-tab across windows
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications []
+# Move windows across workspaces in secondary screens
+gsettings set org.gnome.mutter workspaces-only-on-primary false
 sudo apt install -y --no-install-recommends gnome-tweaks
 
 # Gnome Terminal setup
