@@ -5,6 +5,7 @@ locals {
     "lazygit",
     "micro",
     "starship",
+    "terraform-docs",
     "zoxide",
   ]
   cmd_print_version = jsonencode({ "\"version\"" = "\"$(brew list --versions $PACKAGE)\"" })
