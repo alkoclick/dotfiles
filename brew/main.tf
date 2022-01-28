@@ -1,5 +1,6 @@
 locals {
   brew_packages = [
+    "aws-vault",
     "fzf",
     "kubectl",
     "lazygit",
