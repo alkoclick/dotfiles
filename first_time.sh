@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 
-# Run this script when setting up a new system for the first time
+# Setting up a new system for the first time
+#
+# To get started, you probably want to grab the repo from Github (you can install Git via apt if missing)
+# Run this script, it may fail after brew installs its stuff because it complains about the GCC scam we're pulling
+# Rerun it, it should come back clean
+# Install OnePassword: https://app-updates.agilebits.com/product_history/CLI
+# op signin my.1password.com YOUR_EMAIL
+# Make sure your config.auto.tfvars is set up properly (you can copy the sample from config.auto.example)
 
 # Exit if any of the intermediate steps fail
 set -e
