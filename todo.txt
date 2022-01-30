@@ -1,6 +1,5 @@
 # NonBlocking
-- Replace bells and whistles script with dedicated TF installer
-- Auto install one password CLI
+- Convert brave installer to managed resource
 - Programmatically install brave extensions
 - Set brave settings to hide system title bar and borders
 - Autocomplete for TF

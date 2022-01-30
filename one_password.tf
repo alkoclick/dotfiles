@@ -1,10 +1,11 @@
 locals {
-  op_version = "v1.12.3"
-  cmd_op_version = format("echo %s", jsonencode({ "\"version\"" = "\"$(op --version)\""}))
+  op_version     = "v1.12.3"
+  cmd_op_version = format("echo %s", jsonencode({ "\"version\"" = "\"$(op --version)\"" }))
 }
 
 resource "shell_script" "install_op" {
-  count = var.op_connect ? 1 : 0
+  # Install on long term systems
+  count = var.long_term ? 1 : 0
 
   lifecycle_commands {
     create = format("%s\n%s", file("${path.root}/scripts/install_op.sh"), local.cmd_op_version)
