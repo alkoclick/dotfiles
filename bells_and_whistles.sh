@@ -16,8 +16,9 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
 
 # Gnome Terminal setup
-default_profile=$(dconf read /org/gnome/terminal/legacy/profiles:/default | { read in; echo "${in:1:-1}"; })
-dconf_write_path="/org/gnome/terminal/legacy/profiles:/:$default_profile"
+# We use a custom UUID here
+dconf_write_path="/org/gnome/terminal/legacy/profiles:/:631091e7-8abd-4dcd-a8e9-14e9b720416c"
+dconf write "$dconf_write_path/visible-name" "'DarkTerminal'"
 dconf write "$dconf_write_path/background-color" "'rgb(23,20,33)'"
 dconf write "$dconf_write_path/bold-color-same-as-fg" true
 dconf write "$dconf_write_path/cursor-colors-set" false
