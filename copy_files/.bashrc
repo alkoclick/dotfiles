@@ -61,3 +61,5 @@ eval "$(zoxide init --cmd cd bash)"
 . ~/.bash_aliases
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+complete -C $(which terraform) terraform

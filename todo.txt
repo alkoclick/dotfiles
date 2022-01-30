@@ -1,8 +1,4 @@
 # NonBlocking
-- Convert brave installer to managed resource
-- Programmatically install brave extensions
-- Set brave settings to hide system title bar and borders
-- Autocomplete for TF
 - https://twitter.com/amilajack/status/1479328649820000256?t=t0MYQ96wG8Jfrv8knxl5cw
 - Reduce the size of image by limiting Homebrew further, removing .terraform directory?
 - Create an external provider for gitlab SSH key upload?
