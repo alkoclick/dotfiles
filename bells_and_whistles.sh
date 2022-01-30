@@ -11,10 +11,12 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications []
 # Move windows across workspaces in secondary screens
 gsettings set org.gnome.mutter workspaces-only-on-primary false
-sudo apt install -y --no-install-recommends gnome-tweaks
+# Autohide the side dock
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
+gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
 
 # Gnome Terminal setup
-default_profile=$(dconf read /org/gnome/terminal/legacy/profiles:/default | { read in; echo ${in:1:-1}; })
+default_profile=$(dconf read /org/gnome/terminal/legacy/profiles:/default | { read in; echo "${in:1:-1}"; })
 dconf_write_path="/org/gnome/terminal/legacy/profiles:/:$default_profile"
 dconf write "$dconf_write_path/background-color" "'rgb(23,20,33)'"
 dconf write "$dconf_write_path/bold-color-same-as-fg" true
@@ -30,11 +32,6 @@ dconf write "$dconf_write_path/background-transparency-percent" 10
 dconf write "/org/gnome/terminal/legacy/keybindings/close-tab" "'<Primary>w'"
 dconf write "/org/gnome/terminal/legacy/keybindings/prev-tab" "'<Alt>Left'"
 dconf write "/org/gnome/terminal/legacy/keybindings/next-tab" "'<Alt>Right'"
-
-# Automated upgrades
-sudo apt install -y unattended-upgrades apt-listchanges bsd-mailx
-sudo cp 65custom-upgrades /etc/apt/apt.conf.d/65-custom-upgrades
-echo "If you're on 22.04 yet, consider finding and enabling Livepatch!"
 
 # Brave: https://brave.com/linux/
 sudo apt install apt-transport-https curl
