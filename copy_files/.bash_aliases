@@ -4,7 +4,7 @@ alias qmit='git add . && git commit -m "Committed via qmit alias" && git push'
 
 
 
-## # General sysadmin stuff ###
+### General sysadmin stuff ###
 
 # This one requires root or a role that can add/remove snaps
 alias remove_old_snaps='sudo snap list --all | while read snapname ver rev trk pub notes; do if [[ $notes = *disabled* ]]; then sudo snap remove "$snapname" --revision="$rev"; fi; done'
@@ -33,13 +33,16 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # Faster faster faster
 alias m=micro
 
+# Better find
+alias fd=fdfind
+
 # Copy to cliboard for all outputs
 alias cs="xclip -selection clipboard"
 
 alias oplog='export OP_SESSION_my=$(op signin my --raw)'
 
 
-## # DevOpsLand ###
+### DevOpsLand ###
 
 alias k=kubectl
 alias drun="docker run --rm -it"

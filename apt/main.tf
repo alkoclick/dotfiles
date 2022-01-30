@@ -1,6 +1,7 @@
 locals {
   apt_packages = [
     "cloc",
+    "fd-find",
     "fonts-firacode",
     "xclip",
   ]
