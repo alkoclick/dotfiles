@@ -4,6 +4,9 @@
 [commit]
   gpgsign = ${GPG_SIGN}
 
+[fetch]
+	prune = true
+
 [init]
   defaultBranch = main
 
