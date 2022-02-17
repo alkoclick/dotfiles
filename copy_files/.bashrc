@@ -66,6 +66,7 @@ eval "$(zoxide init --cmd cd bash)"
 
 ## Custom completions
 complete -C $(which terraform) terraform
+source <(op completion bash)
 # Linuxbrew is installed in its own user, so completions are not loaded by default
 if type brew &>/dev/null; then
   for COMPLETION in $(brew --prefix)/etc/bash_completion.d/*
