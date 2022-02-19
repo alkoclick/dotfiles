@@ -3,6 +3,7 @@ locals {
     "cloc",
     "fd-find",
     "fonts-firacode",
+    "powertop",
     "xclip",
   ]
   cmd_print_version = jsonencode({
