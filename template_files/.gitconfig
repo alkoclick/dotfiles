@@ -4,6 +4,9 @@
 [commit]
   gpgsign = ${GPG_SIGN}
 
+[core]
+  excludesfile = ~/.config/git/ignore
+
 [fetch]
 	prune = true
 
@@ -14,10 +17,3 @@
   name = ${NAME}
   email = ${EMAIL}
   signingkey = ${GPG_KEY}
-
-### GPG stuff, required ###
-
-# gpg --full-generate-key
-# gpg --list-secret-keys --keyid-format LONG alkoclick@gmail.com
-# git config --global user.signingkey REPLACE_ME
-# gpg --armor --export REPLACE_ME | cs
