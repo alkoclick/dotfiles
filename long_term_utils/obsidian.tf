@@ -5,7 +5,7 @@ locals {
 resource "shell_script" "obsidian" {
   lifecycle_commands {
     create = file("${path.root}/scripts/install_obsidian.sh")
-    delete = "sudo rm $(which obsidian)"
+    delete = "sudo rm $(which obsidian) || true"
   }
 
   environment = {
