@@ -1,4 +1,5 @@
 .idea
 .terraform
+.obsidian
 
 terraform.tfplan
