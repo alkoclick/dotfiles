@@ -20,6 +20,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 alias dud='du -d 1 -h'
+alias tree='tree -a -h -L 3 -I ".git"'
 
 # some more ls aliases
 alias ll='ls -alFh'

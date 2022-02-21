@@ -4,6 +4,7 @@ locals {
     "fd-find",
     "fonts-firacode",
     "powertop",
+    "tree",
     "xclip",
   ]
   cmd_print_version = jsonencode({
