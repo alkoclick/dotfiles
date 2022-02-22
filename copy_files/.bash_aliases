@@ -52,3 +52,4 @@ alias tin="terraform init"
 # Can be combined with -target etc
 alias tpl="terraform plan -out terraform.tfplan"
 alias tap="terraform apply 'terraform.tfplan'"
+alias tcl="terraform fmt . && terraform-docs ."
