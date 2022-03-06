@@ -3,6 +3,7 @@ locals {
     "aws-vault",
     "fzf",
     "gitleaks",
+    "httpie",
     "kubectl",
     "lazygit",
     "micro",
