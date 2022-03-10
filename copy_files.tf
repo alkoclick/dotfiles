@@ -8,6 +8,7 @@ locals {
     ".config/micro/settings.json",
     ".config/starship.toml",
     ".local/share/applications/obsidian.desktop",
+    "scripts/change_theme.sh"
   ]
   copy_files_nontext = [
     # This folder is checked by default on the desktop file icon standard: https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html
