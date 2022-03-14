@@ -31,7 +31,7 @@ locals {
     "/org/gnome/terminal/legacy/keybindings/next-tab"  = "'<Alt>Right'"
     # Shortcut - theme dark mode
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings" = "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
-    "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding" = "'<Shift><Alt>d'"
+    "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding" = "'<Shift><Ctrl><Alt>d'"
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command" = "'${pathexpand("~/scripts/change_theme.sh")}'"
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name" = "'Change Theme'"
   }
