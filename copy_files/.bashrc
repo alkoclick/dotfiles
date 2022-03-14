@@ -60,6 +60,9 @@ eval "$(zoxide init --cmd cd bash)"
 # Load aliases from separate file
 . ~/.bash_aliases
 
+# Load environment specific aliases if any exist
+[ -f ~/.custom_aliases.bash ] && source ~/.custom_aliases.bash
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 
