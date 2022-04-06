@@ -5,6 +5,7 @@ locals {
     "gitleaks",
     "httpie",
     "kubectl",
+    "kubectx",
     "lazygit",
     "micro",
     "starship",
