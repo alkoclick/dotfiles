@@ -4,6 +4,7 @@ locals {
     "fzf",
     "gitleaks",
     "httpie",
+    "k9s",
     "kubectl",
     "kubectx",
     "lazygit",
