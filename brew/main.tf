@@ -2,6 +2,7 @@ locals {
   brew_packages = [
     "aws-vault",
     "fzf",
+    "gh",
     "gitleaks",
     "httpie",
     "k9s",

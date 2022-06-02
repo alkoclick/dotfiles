@@ -77,3 +77,4 @@ if type brew &>/dev/null; then
       [[ -f $COMPLETION ]] && source "$COMPLETION"
   	done
 fi
+eval "$(gh completion -s bash)"
