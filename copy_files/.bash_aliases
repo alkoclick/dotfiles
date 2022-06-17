@@ -46,6 +46,7 @@ alias oplog='export OP_SESSION_my=$(op signin my --raw)'
 ### DevOpsLand ###
 
 alias k=kubectl
+alias ksh="kubectl run -i --tty busybox --image=busybox --restart=Never && kubectl delete pod busybox"
 alias drun="docker run --rm -it"
 alias dockerhere="docker run --rm -it --entrypoint bash -v $PWD:/app --workdir /app"
 alias tin="terraform init"
