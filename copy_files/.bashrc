@@ -69,6 +69,7 @@ eval "$(zoxide init --cmd cd bash)"
 
 ## Custom completions
 complete -C $(which terraform) terraform
+complete -o default -F __start_kubectl k # For the kubectl alias
 source <(op completion bash)
 # Linuxbrew is installed in its own user, so completions are not loaded by default
 if type brew &>/dev/null; then
