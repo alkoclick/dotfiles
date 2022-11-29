@@ -1,5 +1,6 @@
 [alias]
   wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+  actions = "!f() { gh run list --branch $(git rev-parse --abbrev-ref HEAD); }; f"
 
 [commit]
   gpgsign = ${GPG_SIGN}
